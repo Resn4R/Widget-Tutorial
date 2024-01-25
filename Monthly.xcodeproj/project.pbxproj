@@ -17,6 +17,7 @@
 		4FE586872B62C40700EC3B91 /* MonthlyWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FE586862B62C40700EC3B91 /* MonthlyWidget.swift */; };
 		4FE586892B62C40900EC3B91 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4FE586882B62C40900EC3B91 /* Assets.xcassets */; };
 		4FE5868D2B62C40900EC3B91 /* MonthlyWidgetExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 4FE5867D2B62C40600EC3B91 /* MonthlyWidgetExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		4FE586952B62CF2900EC3B91 /* MonthConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FE586942B62CF2900EC3B91 /* MonthConfig.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,6 +57,7 @@
 		4FE586862B62C40700EC3B91 /* MonthlyWidget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonthlyWidget.swift; sourceTree = "<group>"; };
 		4FE586882B62C40900EC3B91 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4FE5868A2B62C40900EC3B91 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4FE586942B62CF2900EC3B91 /* MonthConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonthConfig.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -129,6 +131,7 @@
 			isa = PBXGroup;
 			children = (
 				4FE586842B62C40700EC3B91 /* MonthlyWidgetBundle.swift */,
+				4FE586942B62CF2900EC3B91 /* MonthConfig.swift */,
 				4FE586862B62C40700EC3B91 /* MonthlyWidget.swift */,
 				4FE586882B62C40900EC3B91 /* Assets.xcassets */,
 				4FE5868A2B62C40900EC3B91 /* Info.plist */,
@@ -247,6 +250,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4FE586852B62C40700EC3B91 /* MonthlyWidgetBundle.swift in Sources */,
+				4FE586952B62CF2900EC3B91 /* MonthConfig.swift in Sources */,
 				4FE586872B62C40700EC3B91 /* MonthlyWidget.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
