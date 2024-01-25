@@ -83,6 +83,7 @@ struct MonthlyWidget: Widget {
         }
         .configurationDisplayName("Monthly Style Widget")
         .description("The theme of the widget changes based on the month.")
+        .supportedFamilies([.systemSmall])
     }
 }
 
