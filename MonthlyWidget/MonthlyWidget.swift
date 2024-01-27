@@ -42,28 +42,34 @@ struct DayEntry: TimelineEntry {
 
 struct MonthlyWidgetEntryView : View {
     var entry: Provider.Entry
+    let monthConfig: MonthConfig
+    
+    init(entry: DayEntry) {
+        self.entry = entry
+        self.monthConfig = .determineConfig(from: entry.date)
+    }
 
     var body: some View {
         ZStack {
             ContainerRelativeShape()
-                .fill(.gray.gradient)
+                .fill(monthConfig.backgroundColor)
                 
             VStack {
                 HStack(spacing: 4) {
-                    Text(entry.emoji)
+                    Text(monthConfig.emojiText)
                         .font(.title)
                     
                     Text(entry.date.weekdayDisplayFormat)
                         .font(.headline)
                         .bold()
                         .minimumScaleFactor(0.6)
-                        .foregroundStyle(.black.opacity(0.6))
+                        .foregroundStyle(monthConfig.weekdayTextColor)
                     
                     Spacer()
                 }
                 Text(entry.date.dayDisplayFormat)
                     .font(.system(size: 80, weight: .heavy))
-                    .foregroundStyle(.white.opacity(0.8))
+                    .foregroundStyle(monthConfig.dayTextColor)
             }
         }
     }
@@ -89,9 +95,10 @@ struct MonthlyWidget: Widget {
 
 #Preview(as: .systemSmall) {
     MonthlyWidget()
+    
 } timeline: {
-    DayEntry(date: .now, emoji: "⛄️")
-    DayEntry(date: .now, emoji: "⛄️")
+    DayEntry(date: .now, emoji: MonthConfig.determineConfig(from: .now).emojiText)
+    DayEntry(date: .now, emoji: MonthConfig.determineConfig(from: .now).emojiText)
 }
 
 
